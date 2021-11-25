@@ -1,4 +1,6 @@
-The source code in this GitHub respiratory is based on the method proposed in '3D Deep Learning for Anatomical Structure Segmentation in Multiple Imaging Modalities (2021)' by Barbara Villarini, Hykoush Asaturyan, Sila Kurugol, Onur Afacan, Jimmy D. Bell and E. Louise Thomas.
+The source code in this GitHub respiratory is based on the method proposed in '3D Deep Learning for Anatomical Structure Segmentation in Multiple Imaging Modalities (2021)' by Barbara Villarini, Hykoush Asaturyan, Sila Kurugol, Onur Afacan, Jimmy D. Bell and E. Louise Thomas; and in 'Improving Automatic Renal Segmentation in Clinically Normal and Abnormal Paediatric DCE-MRI via Contrast Maximisation and Convolutional Networks for Computing Markers of Kidney Function (2021)' by Hykoush Asaturyan, Barbara Villarini, Karen Sarao, Jeanne S. Chow, Onur Afacan and Sila Kurugol.
+
+**IMPORTANT: THIS GITHUB IS CURRENTLY BEING UPDATING**
 
 The program presented in this GitHub respiratory was built using Python 3.0 (Keras and TensorFlow).
 
