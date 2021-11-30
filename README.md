@@ -55,4 +55,8 @@ This file details the implementation of a sub-pixel convolutional upscaling laye
 **10) tensorflow_backend_gh**
 
 This file details the implementation of a phase shift algorithm to convert channels/depth for spatial resolution.
+
+**11) detect_and_segment_gh.py**
+
+This file can process one or multiple 4D DCE-MRI volumes. Firstly, detection is performed to generate a bounding box over each kidney of interest. Second, segmentation is performed using the cropped region containing the kidney(s) of interest. Please ensure you have a trained model for each stage.
     
