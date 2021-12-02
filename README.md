@@ -2,9 +2,11 @@
 
 The source-code in this GitHub respiratory is based on the methods proposed in:
 
-(1) '3D Deep Learning for Anatomical Structure Segmentation in Multiple Imaging Modalities (2021)' by Barbara Villarini, Hykoush Asaturyan, Sila Kurugol, Onur Afacan, Jimmy D. Bell and E. Louise Thomas;
+(1) 'Improving Automatic Renal Segmentation in Clinically Normal and Abnormal Paediatric DCE-MRI via Contrast Maximisation and Convolutional Networks for Computing Markers of Kidney Function (2021)' by Hykoush Asaturyan, Barbara Villarini, Karen Sarao, Jeanne S. Chow, Onur Afacan and Sila Kurugol. https://doi.org/10.3390/s21237942
 
-(2) 'Improving Automatic Renal Segmentation in Clinically Normal and Abnormal Paediatric DCE-MRI via Contrast Maximisation and Convolutional Networks for Computing Markers of Kidney Function (2021)' by Hykoush Asaturyan, Barbara Villarini, Karen Sarao, Jeanne S. Chow, Onur Afacan and Sila Kurugol.
+(2) '3D Deep Learning for Anatomical Structure Segmentation in Multiple Imaging Modalities (2021)' by Barbara Villarini, Hykoush Asaturyan, Sila Kurugol, Onur Afacan, Jimmy D. Bell and E. Louise Thomas. https://doi.org/10.1109/CBMS52027.2021.00066
+
+(3) 'Automatic renal segmentation in DCE-MRI using convolutional neural networks (2018)' by Marzieh Haghighi, Simon K. Warfield and Sila Kurugol. https://doi.org/10.1109/ISBI.2018.8363865
 
 **IMPORTANT: THIS GITHUB IS CURRENTLY BEING UPDATING**
 
