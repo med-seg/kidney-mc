@@ -28,7 +28,7 @@ This file details the implementation for generating downsampled and interpolated
 
 **4) funcs_gh.py**
 
-This file delivers a number of functions that (i) process 4D .nii image data and generate its corresponding 4D image data array; (ii) process 3D .nii kidney ground-truth mask data and generate its corresponding mask array; (iii) generate the minimal bounding boxes for each kidney via the ground-truth masks; (iv) process segmentation/detection masks and save to a .nii file. The file paths in these functions serve as a template based on the original implementation.
+This file delivers a number of functions to (i) process 4D .nii image data and generate its corresponding 4D image data array; (ii) process 3D .nii kidney ground-truth mask data and generate its corresponding mask array; (iii) generate the minimal bounding boxes for each kidney via the ground-truth masks; (iv) process 3D kidney segmentation/detection masks and save to a .nii file. The file paths in these functions serve as a template based on the original implementation.
 
 **4a) subjectDicomInfo_gh.xls**
 
@@ -61,4 +61,12 @@ This file details the implementation of a phase shift algorithm to convert chann
 **11) detect_and_segment_gh.py**
 
 This file can process one or multiple 4D DCE-MRI volumes. Firstly, detection is performed to generate a bounding box over each kidney of interest. Second, segmentation is performed using the cropped region containing the kidney(s) of interest. Please ensure you have a trained model for each stage.
+
+**12) funcs_mc.py**
+
+This file delivers a number of functions that processes 4D image volume data; processes 3D kidney automatic segmentation masks and generates the minimal bounding box for each kidney; processes and saves 3D medulla and cortex segmentation masks. The file paths in these functions serve as a template based on the original implementation.
+
+**13) medulla_cortex_extract_gh.py**
+
+This file delivers a preliminary method for segmenting medulla and cortex in 4D image volume data using the automatic segmentation masks via the file, funcs_mc.py.
     
