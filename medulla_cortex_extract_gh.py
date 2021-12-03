@@ -113,11 +113,9 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
     
     numPC=5;
     pca = PCA(n_components=numPC)
-    
     dx=64;dy=64;dz=32;
      
     print(patientName)
-    
     vol4D00, KM, Box, rkmOri, lkmOri = funcs_mc.readData4(patientName,subjectInfo,reconMethod,1);
     
     copyKM = np.copy(KM);
@@ -136,7 +134,6 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
     else:
         timeRes=np.copy(timeRes0); 
         
-        
     im = np.copy(vol4D00);
     medianFind = np.median(im);
     if medianFind == 0:
@@ -145,7 +142,7 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
     im=im[:,:,:,baselineTime:];
     im=im/medianFind;
     
-    vol4D0 = im.copy();
+    vol4D0 = np.copy(im);
     copyVol4D0 = vol4D0
     
     origTimeResVec=np.arange(0,vol4D0.shape[3]*timeRes,timeRes);
@@ -186,8 +183,8 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
         croppedData4DR=zoom(croppedData4DR,(dx/np.size(croppedData4DR,0),dy/np.size(croppedData4DR,1),dz/np.size(croppedData4DR,2),1),order=0);
 
         f_out = interp1d(origTimeResVec,croppedData4DR, axis=3,bounds_error=False,fill_value=0)     
-        croppedData4DR = f_out(resamTimeResVec);  
-
+        croppedData4DR = f_out(resamTimeResVec);
+        
         KMR=zoom(KMR,(dx/np.size(KMR,0),dy/np.size(KMR,1),dz/np.size(KMR,2)),order=0);
         
 #       croppedData4DR_pcs[KMR<=0] = 0;
@@ -288,7 +285,7 @@ def save_image(array, name):
     plt.close(fig)
     
 
-# begin medulla and cortex segmentation
+# begin medulla and cortex segmentation #
 
 # array containing 4D volume filenames and 
 # baselines of respective 4D volumes
@@ -331,7 +328,6 @@ for s in range(len(pNameList)):
          noRight = 1;
 
      if 1:
-       
         if croppedData4DL == []:
             croppedData4DL2 = np.copy(croppedData4DR);
             croppedData4DL = np.copy(croppedData4DR);
@@ -385,7 +381,6 @@ for s in range(len(pNameList)):
                         imageL = croppedData4DL[:,:,ss,(whilei+1)]
                     else:
                         break
-                        
                     whilei += 1;
 
                 
@@ -535,7 +530,6 @@ for s in range(len(pNameList)):
                             imageR = croppedData4DR2[:,:,ss,(whilei+1)]
                         else:
                             break
-                            
                         whilei += 1;
                         
                 else:
