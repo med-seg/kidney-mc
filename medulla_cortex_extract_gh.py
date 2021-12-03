@@ -2,7 +2,6 @@ import sys
 import os
 from os import path
 
-
 import numpy as np
 np.seterr(divide='ignore', invalid='ignore')
 import pandas as pd
@@ -47,13 +46,6 @@ from PIL import Image, ImageEnhance
 import nibabel as nib
 import pickle
 import funcs_mc
-
-import tensorflow
-if tensorflow.test.gpu_device_name():
-   print('Default GPU Device: {}'.format(tensorflow.test.gpu_device_name()))
-else:
-   print("Please install GPU version of TF")
-
 
 def computeNew4DAfterBasline(im, baseline):    
     
@@ -126,7 +118,6 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
      
     print(patientName)
     
-    
     vol4D00, KM, Box, rkmOri, lkmOri = funcs_mc.readData4(patientName,subjectInfo,reconMethod,1);
     
     copyKM = np.copy(KM);
@@ -141,7 +132,6 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
     # timeRes0 = timeRes00[0]  
 
     if not isinstance(timeRes0, (int, float)):
-        
         timeRes=float(timeRes0.split("[")[1].split(",")[0]);
     else:
         timeRes=np.copy(timeRes0); 
@@ -155,8 +145,7 @@ def processSingleSubjects_ha(patientName,subjectInfo,baselineTime):
     im=im[:,:,:,baselineTime:];
     im=im/medianFind;
     
-    vol4D0 = im;
-
+    vol4D0 = im.copy();
     copyVol4D0 = vol4D0
     
     origTimeResVec=np.arange(0,vol4D0.shape[3]*timeRes,timeRes);
